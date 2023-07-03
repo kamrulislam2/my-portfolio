@@ -1,0 +1,30 @@
+.box {
+  position: relative;
+  width: 200px;
+  height: 200px;
+  border-radius: 20px;
+}
+.box::before {
+  content: "";
+  position: absolute;
+  width: 160px;
+  height: 160%;
+  background: linear-gradient(#00ccff, #d400d4);
+  animation: animate 2s linear infinite;
+}
+.box::after {
+  content: "";
+  position: absolute;
+  inset: 4px;
+  background: #2a2344;
+  border-radius: 16px;
+}
+
+@keyframes animate {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(350deg);
+  }
+}
